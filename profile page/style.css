@@ -1,0 +1,171 @@
+/* CSS Document */
+body {
+	margin: 0;
+}
+.container {
+	margin: auto;
+	width: 90%;
+	margin-top: 35px;
+}
+.containerIndex {
+	margin: auto;
+	width: 88%;
+	border: #fdfa98 1px solid;
+	margin-top: 35px;
+	background-color: #fffff6;
+}
+.indexHeader {
+	width: 32%;
+	margin: 0 auto;
+}
+hr.titleHR {
+	background: #105389;
+	height: 3px;
+	border: none;
+}
+h1.inexH1 {
+	font-size: 19pt;
+	text-align: center;
+	color: rgb(16, 83, 137);
+}
+h2.indexH2 {
+	color: #969696;
+	font-size: 19px;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 13px;
+}
+.indexULdiv {
+	width: 33%;
+	margin: auto;
+	margin-top: 62px;
+	list-style-position: inside;
+}
+ul.indexUL {
+	list-style-type: square;
+	color: slategray;
+}
+a.indexULlink {
+	text-decoration: none;
+	color: teal;
+	font-size: 17px;
+}
+a.indexULlink:hover {
+	text-decoration: underline;
+}
+/* *****************************************************************************************************
+********************************Assignment 01***********************************************************
+****************************************************************************************************** */
+hr.mainHr2 {
+	background: #105389;
+	height: 3px;
+}
+hr.mainHr1 {
+	margin-top: 30px;
+}
+.profilePic {
+	border: black double;
+	width: 35.6%;
+	display: block;
+	float: left;
+}
+img.profPicture {
+	height: 300px;
+	padding: 3px;
+	padding-bottom: 0px;
+}
+blockquote {
+	width: 42%;
+	margin: auto;
+	font-style: italic;
+	color: slategrey;
+	margin-top: 40px;
+    margin-bottom: 20px;
+}
+.introTable {
+	display: block;
+	float: right;
+	width: 100%;
+	height: 160px;
+	margin: auto;
+	padding: 10px;
+}
+table.FirstTable {
+	margin-top: 3px;
+}
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+.landscapeIMG {
+	width: 60%;
+	float: right;
+	margin: auto;
+	margin-top: 10px;
+}
+img.panormaPic {
+	width: 590px;
+	display: block;
+	float: right;
+}
+.courseTable {
+	width: 100%;
+ overflow-x:auto;
+}
+.clear {
+	clear: both;
+}
+h3.courselist {
+	font-family: -webkit-pictograph;
+	color: #500000;
+	font-size: 25px;
+	text-align: center;
+}
+a.goToMainPage {
+	text-decoration: none;
+	font-size: 20px;
+	color: #500000;
+	font-family: initial;
+}
+a.goToMainPage:hover {
+	text-decoration: underline;
+}
+.goBackLink {
+	width: 22%;
+	margin: auto;
+	text-align: center;
+	margin-top: 20px;
+	padding: 10px;
+	border: #500000 1px solid;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #779dbe;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #0a518b;
+  color: white;
