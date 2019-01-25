@@ -15,7 +15,7 @@
 <h2 class="indexH2">Introduction Page</h2>
 </div>
 <?php
-echo "Today is " . date("Y/m/d") . date("l") ."<br>";
+echo "Today is " . date("Y/m/d") . " " . date("l") ."<br>";
 ?>
 <div class="topnav">
   <a class="active" href="https://thawing-mountain-32172.herokuapp.com/profilepage/index.php">Home</a>

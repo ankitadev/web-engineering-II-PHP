@@ -9,7 +9,7 @@
 
 <body>
 
-<img class="profPicture" src="underConstruction.jpg" alt="underConstruction" />
+<img class="underConstruction" src="underConstruction.phg" alt="underConstruction" />
 
 </body>
 
