@@ -4,7 +4,7 @@
 <base href="">
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>Assignmnt#1</title>
+<title>Ankita's profile</title>
 </head>
 
 <body>
@@ -15,16 +15,12 @@
 <h2 class="indexH2">Introduction Page</h2>
 </div>
 <?php
-echo "Today is " . date("Y/m/d") . "<br>";
-echo "Today is " . date("Y.m.d") . "<br>";
-echo "Today is " . date("Y-m-d") . "<br>";
-echo "Today is " . date("l");
+echo "Today is " . date("Y/m/d") . date("l") ."<br>";
 ?>
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+  <a class="active" href="https://thawing-mountain-32172.herokuapp.com/profilepage/index.php">Home</a>
+  <a href="https://thawing-mountain-32172.herokuapp.com/profilepage/index.php">Contact</a>
+  <a href="https://thawing-mountain-32172.herokuapp.com/profilepage/index.php">About</a>
 </div>
 <hr class="mainHr1">
 <hr class="mainHr2">
@@ -59,7 +55,7 @@ But man is not made for defeat. A man can be destroyed but not defeated.</b>
 
 <div class="clear"></div>
 <div class="goBackLink">
-<a class="goToMainPage" href="http://157.201.194.254/~ankitad/index.html">Next Page</a>
+<a class="goToMainPage" href="https://thawing-mountain-32172.herokuapp.com/profilepage/secondpage.php">Next Page</a>
 </div>
 </div>
 
