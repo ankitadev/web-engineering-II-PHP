@@ -20,7 +20,7 @@ setcookie(AboutVisit, time (), $year) ;
 if (isset ($last))
 {
 $change = time () - $last;
-if ( $change > 86400)
+if ( $change > 86)
 {
 echo "Welcome back! <br> You last visited on ". date("m/d/y",$last) ;
 }
