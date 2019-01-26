@@ -14,6 +14,7 @@
 <body>
 
 	<div class="container-fluid">
+		<div class="page-header">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 			  <div class="container-fluid">
 			    <div class="navbar-header">
@@ -30,6 +31,7 @@
 			    </ul>
 			  </div>
 			</nav>
+		</div>
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="thumbnail">
