@@ -27,7 +27,7 @@
 			      <li><a href="#">Page 3</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
-			      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+			      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 			    </ul>
 			  </div>
 			</nav>
@@ -37,7 +37,7 @@
 				<div class="thumbnail">
 				<img src="magazine1.jpeg" class="img-thumbnail" alt="Naruto Shippuden Summer 2009 Collector">
 				<div class="caption">
-           			 <p>Naruto Shippuden Summer 2009 Collector.</p>
+           			 <p class="text-center"><small>Naruto Shippuden Summer 2009 Collector</small></p>
            			 <button type="button" class="btn btn-primary btn-block">Add to Cart</button>
           		</div>
           	</div>
@@ -46,7 +46,7 @@
 				<div class="thumbnail">
 				<img src="magazine2.jpeg" class="img-thumbnail" alt="Naruto Winter 2007/2008 Collector">
 				<div class="caption">
-	           		 <p>Naruto Winter 2007/2008 Collector</p>
+	           		 <p class="text-center"><small>Naruto Winter 2007/2008 Collector</small></p>
 	           		 <button type="button" class="btn btn-primary btn-block">Add to Cart</button>
 	         	</div>
 	         </div>
@@ -55,7 +55,7 @@
 				<div class="thumbnail">
 				<img src="magazine3.jpeg" class="img-thumbnail" alt="Naruto Collector 3">
 				<div class="caption">
-	            	<p>Naruto Collector 3</p>
+	            	<p class="text-center"><small>Naruto Collector 3</small></p>
 	            	<button type="button" class="btn btn-primary btn-block">Add to Cart</button>
 	         	 </div>
 	         	</div>
@@ -66,7 +66,7 @@
 				<div class="thumbnail">
 				<img src="magazine1.jpeg" class="img-thumbnail" alt="Naruto Shippuden Summer 2009 Collector">
 				<div class="caption">
-           			 <p>Naruto Shippuden Summer 2009 Collector.</p>
+           			 <p class="text-center"><small>Naruto Shippuden Summer 2009 Collector</small></p>
            			 <button type="button" class="btn btn-primary btn-block">Add to Cart</button>
           		</div>
           	</div>
@@ -75,7 +75,7 @@
 				<div class="thumbnail">
 				<img src="magazine2.jpeg" class="img-thumbnail" alt="Naruto Winter 2007/2008 Collector">
 				<div class="caption">
-	           		 <p>Naruto Winter 2007/2008 Collector</p>
+	           		 <p class="text-center"><small>Naruto Winter 2007/2008 Collector</small></p>
 	           		 <button type="button" class="btn btn-primary btn-block">Add to Cart</button>
 	         	</div>
 	         </div>
@@ -84,7 +84,7 @@
 				<div class="thumbnail">
 				<img src="magazine3.jpeg" class="img-thumbnail" alt="Naruto Collector 3">
 				<div class="caption">
-	            	<p>Naruto Collector 3</p>
+	            	<p class="text-center"><small>Naruto Collector 3</small></p>
 	            	<button type="button" class="btn btn-primary btn-block">Add to Cart</button>
 	         	 </div>
 	         	</div>
