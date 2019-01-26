@@ -18,11 +18,11 @@
 			<h1>Welcome shoppers</h1>
 		</div>
 		<div class="row">
-			<div class="colsm-4"><img src="magazine1.jpeg"></div>
-			<div class="colsm-4"><img src="magazine2.jpeg"></div>
-			<div class="colsm-4"><img src="magazine3.jpeg"></div>
+			<div class="colsm-4"><img src="magazine1.jpeg" class="img-thumbnail" alt="Naruto Collector 3"></div>
+			<div class="colsm-4"><img src="magazine2.jpeg" class="img-thumbnail" alt="Naruto Collector 3"></div>
+			<div class="colsm-4"><img src="magazine3.jpeg" class="img-thumbnail" alt="Naruto Collector 3"></div>
 		</div>
 	</div>
 	
 </body>
-</html>]
+</html>
