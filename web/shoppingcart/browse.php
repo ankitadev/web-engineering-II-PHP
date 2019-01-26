@@ -18,9 +18,24 @@
 			<h1>Welcome shoppers</h1>
 		</div>
 		<div class="row">
-			<div class="colsm-4"><img src="magazine1.jpeg" class="img-thumbnail" alt="Naruto Collector 3"></div>
-			<div class="colsm-4"><img src="magazine2.jpeg" class="img-thumbnail" alt="Naruto Collector 3"></div>
-			<div class="colsm-4"><img src="magazine3.jpeg" class="img-thumbnail" alt="Naruto Collector 3"></div>
+			<div class="colsm-4">
+				<img src="magazine1.jpeg" class="img-thumbnail" alt="Naruto Shippuden Summer 2009 Collector">
+				<div class="caption">
+           			 <p>Naruto Shippuden Summer 2009 Collector.</p>
+          		</div>
+			</div>
+			<div class="colsm-4">
+				<img src="magazine2.jpeg" class="img-thumbnail" alt="Naruto Winter 2007/2008 Collector">
+				<div class="caption">
+	           		 <p>Naruto Winter 2007/2008 Collector</p>
+	         	</div>
+			</div>
+			<div class="colsm-4">
+				<img src="magazine3.jpeg" class="img-thumbnail" alt="Naruto Collector 3">
+				<div class="caption">
+	            	<p>Naruto Collector 3</p>
+	         	 </div>
+			</div>
 		</div>
 	</div>
 	
