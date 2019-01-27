@@ -1,8 +1,5 @@
-<?php session_start();
-#cart.php - A simple shopping cart with add to cart, and remove links
- //---------------------------
- //initialize sessions
-
+<?php 
+session_start();
 //Define the products and cost
 $products = array("product A", "product B", "product C");
 $amounts = array("19.99", "10.99", "2.99");

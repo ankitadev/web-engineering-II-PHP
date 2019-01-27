@@ -12,26 +12,18 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<? php
-	//---------------------------
- //Delete
- if ( isset($_GET["delete"]) )
- {
-   $i = $_GET["delete"];
-   $qty = $_SESSION["qty"][$i];
-   $qty--;
-   $_SESSION["qty"][$i] = $qty;
-
- //remove item if quantity is zero
- if ($qty == 0) {
-   $_SESSION["amounts"][$i] = 0;
-   unset($_SESSION["cart"][$i]);
- }
- else
- {
-   $_SESSION["amounts"][$i] = $amounts[$i] * $qty;
- }
- }
+	<?php
+	//Reset
+	 if ( isset($_GET['reset']) )
+	 {
+	 if ($_GET["reset"] == 'true')
+	   {
+	   unset($_SESSION["qty"]); //The quantity for each product
+	   unset($_SESSION["amounts"]); //The amount from each product
+	   unset($_SESSION["total"]); //The total cost
+	   unset($_SESSION["cart"]); //Which item has been chosen
+	   }
+	 }
 	?>
 <div class="container-fluid">
 		<div class="page-header">
@@ -50,7 +42,16 @@
 			  </div>
 			</nav>
 		</div>
-
+<div class="row">
+  <div class="col-sm-8">
+  </div>
+  <div class="col-sm-4">
+  	<button type="button" class="btn btn-danger"><a href="?reset=true">Reset Cart</a></button>
+  	<button type="button" class="btn btn-success"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Keep Shopping</a></button>
+  	<button type="button" class="btn btn-success">CheckOut</button>
+  </div>
+</div>
+	
 		<div class="panel panel-default">
 	    <div class="panel-footer">Panel Footer</div>
   	</div>
