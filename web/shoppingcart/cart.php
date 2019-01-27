@@ -12,12 +12,33 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<? php
+	//---------------------------
+ //Delete
+ if ( isset($_GET["delete"]) )
+ {
+   $i = $_GET["delete"];
+   $qty = $_SESSION["qty"][$i];
+   $qty--;
+   $_SESSION["qty"][$i] = $qty;
+
+ //remove item if quantity is zero
+ if ($qty == 0) {
+   $_SESSION["amounts"][$i] = 0;
+   unset($_SESSION["cart"][$i]);
+ }
+ else
+ {
+   $_SESSION["amounts"][$i] = $amounts[$i] * $qty;
+ }
+ }
+	?>
 <div class="container-fluid">
 		<div class="page-header">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 			  <div class="container-fluid">
 			    <div class="navbar-header">
-			      Naruto Magaziiine
+			      <li>Naruto Magaziiine</li>
 			    </div>
 			    <ul class="nav navbar-nav">
 			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Home</a></li>
