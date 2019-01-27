@@ -39,9 +39,10 @@ session_start();
 			</nav>
 		</div>
 		<div class="row">
-			<?php 
-			for($i = 0; i <= 3; i++)
+			<?php
+			for ($i=1; i<=3;i++)
 			{
+			?>
 			<div class="col-sm-4">
 				<div class="thumbnail">
 				<img src="magazine1.jpeg" class="img-thumbnail" alt="Naruto Shippuden Summer 2009 Collector">
@@ -53,6 +54,7 @@ session_start();
           	</div>
 			</div>
 		</div>
+		<?php
 		}
 		?>
 		<div class="row">
