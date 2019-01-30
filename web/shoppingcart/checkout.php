@@ -39,46 +39,46 @@ echo $_SESSION['add'];
     <div class="col-sm-10">
     <input type="firstName" class="form-control" name="firstName">
 </div>
-  </div></br>
+  </div></br></br>
   <div class="form-group">
     <label class="control-label col-sm-2" for="lastName">Last Name:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
     <input type="lastName" class="form-control" name="lastName">
 </div>
   </div></br></br>
    <div class="form-group">
     <label class="control-label col-sm-2" for="email">Email:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
     <input type="email" class="form-control" name="email">
 </div>
   </div></br></br>
    <div class="form-group">
     <label class="control-label col-sm-2" for="address">Address:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
     <input type="address" class="form-control" name="address">
 </div>
   </div></br></br>
    <div class="form-group">
     <label class="control-label col-sm-2" for="city">City:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
     <input type="city" class="form-control" name="city">
 </div>
   </div></br></br>
    <div class="form-group">
     <label class="control-label col-sm-2" for="state">State:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
     <input type="state" class="form-control" name="state">
 </div>
   </div></br></br>
    <div class="form-group">
     <label class="control-label col-sm-2" for="country">Country:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
     <input type="country" class="form-control" name="country">
 </div>
   </div></br></br>
    <div class="form-group">
     <label class="control-label col-sm-2" for="zipCode">Zip Code:</label>
-    <div class="col-sm-10">
+    <div class="col-sm-6">
     <input type="zipCode" class="form-control" name="zipCode">
 </div>
   </div></br></br>
