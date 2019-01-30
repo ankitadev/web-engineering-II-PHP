@@ -25,7 +25,7 @@ echo $_SESSION['add'];
 			      <a class="navbar-brand" href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Naruto Magaziiiine</a>
 			    </div>
 			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Home</a></li>
+			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Shop</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
 			      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
@@ -33,6 +33,7 @@ echo $_SESSION['add'];
 			  </div>
 			</nav>
 		</div>
+		<h1><small>Check Out</small></h1>
 		<form class="form-horizontal" action="confirm.php" method="post">
   <div class="form-group">
     <label class="control-label col-sm-2" for="firstName">First Name:</label>

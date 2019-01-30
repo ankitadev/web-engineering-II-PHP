@@ -30,7 +30,7 @@ session_start();
 			      <a class="navbar-brand" href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Naruto Magaziiiine</a>
 			    </div>
 			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Home</a></li>
+			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Shop</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
 			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
