@@ -19,7 +19,7 @@ session_start();
 <?php
 //Define the products and cost
  $products = array("Naruto Shippuden Summer 2009 Collector", "Naruto Winter 2007/2008 Collector", "Naruto Collector 3", "Naruto Weekly Jump", "Naruto Winter 2007/2008 Collector", "Naruto Collector 3");
- $amounts = array("19.99", "10.99", "20.99", "5.25", "2.70", "10.90");
+ $amounts = array("19.99", "10.99", "20.99", "5.25", "2.71", "10.90");
 
  if ( isset($_GET["add"]) )
    {
@@ -52,7 +52,7 @@ session_start();
 			   ?>
 			<div class="col-sm-4">
 				<div class="thumbnail">
-				<img src="magazine<?php echo"$i"; ?>.jpeg" class="img-thumbnail" alt="<?php echo($products[$i]); ?>" style="width:370px">
+				<img src="magazine<?php echo"$i"; ?>.jpeg" class="img-thumbnail" alt="<?php echo($products[$i]); ?>" style="width:370px; height: 490px;">
 				<div class="caption">
            			 <p class="text-center text-muted"> <?php echo($products[$i]); ?> </p></br>
            			 <p class="text-center text-muted">$ <?php echo($amounts[$i]); ?> </p></br>
