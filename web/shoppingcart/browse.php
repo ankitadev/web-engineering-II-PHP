@@ -41,7 +41,7 @@ session_start();
 			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Shop</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
-			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a> <span class="badge"><?php echo($_GET["add"]); ?></span></li>
+			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/cart.php"><span class="badge"><?php echo($_GET["qty"]); ?></span><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 			    </ul>
 			  </div>
 			</nav>
