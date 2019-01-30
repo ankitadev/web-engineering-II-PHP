@@ -16,6 +16,12 @@ session_start();
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<?php
+	unset($_SESSION["qty"]); //The quantity for each product
+	   unset($_SESSION["amounts"]); //The amount from each product
+	   unset($_SESSION["total"]); //The total cost
+	   unset($_SESSION["cart"]); //Which item has been chosen
+	   ?>
 <div class="container-fluid">
 		<div class="page-header">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -27,7 +33,7 @@ session_start();
 			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Home</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
-			      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 			    </ul>
 			  </div>
 			</nav>
