@@ -1,7 +1,7 @@
 <?php
 // Start the session
 session_start();
-$_GET["add"] = $_SESSION["cart"];
+$_GET["i"] = $_SESSION["cart"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -78,7 +78,8 @@ $_GET["add"] = $_SESSION["cart"];
 			 </tr>
 		 <?php
 		 $total = 0;
-		 foreach ( $_SESSION["cart"] as $i ) {
+		 foreach ( $_SESSION["cart"] as $i ) 
+		 {
 		 ?>
 			 <tr>
 			 <td><?php echo( $products[$_SESSION["cart"][$i]] ); ?></td>
@@ -98,9 +99,6 @@ $_GET["add"] = $_SESSION["cart"];
 			 <td colspan="7">Total : <?php echo($total); ?></td>
 			 </tr>
 		 </table>
-		 <?php
-		 }
-		 ?>
 <div class="row">
   <div class="col-sm-8">
   </div>
