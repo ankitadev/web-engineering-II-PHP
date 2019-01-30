@@ -33,8 +33,8 @@ echo $_SESSION['add'];
 			  </div>
 			</nav>
 		</div>
-		<form action="/action_page.php">
-  <div class="form-inline" action="confirm.php">
+		<form class="form-inline" action="confirm.php">
+  <div>
     <label for="firstName">First Name:</label>
     <input type="firstName" class="form-control" id="firstName">
   </div>
@@ -66,7 +66,7 @@ echo $_SESSION['add'];
     <label for="zipCode">Zip Code:</label>
     <input type="zipCode" class="form-control" id="zipCode">
   </div>
-  <button type="submit" class="btn-success">Confirm Purchase</button>
+  <button type="submit" class="btn btn-success">Confirm Purchase</button>
 </form>
 </div>
 </body>

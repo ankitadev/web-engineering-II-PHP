@@ -65,6 +65,7 @@ $_GET["i"] = $_SESSION["cart"];
 			  </div>
 			</nav>
 		</div>
+		<h1><small>Your Cart</small></h1>
 		<table class="table table-striped">
 			 <tr>
 			 <th>Product</th>

@@ -28,9 +28,8 @@
 			  </div>
 			</nav>
 		</div>
-		<div class="panel panel-default">
-	    <div class="panel-footer">Panel Footer</div>
-  	</div>
+		<h1><small>Thank You for Shopping with us</small></h1>
+		<h2><small>Your Items will be sent to</small></h2>
 </div>
 </body>
 </html>
