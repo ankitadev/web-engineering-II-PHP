@@ -57,7 +57,7 @@ session_start();
 				<div class="caption">
            			 <p class="text-center text-muted"> <?php echo($products[$i]); ?> </p></br>
            			 <p class="text-center text-muted">$ <?php echo($amounts[$i]); ?> </p></br>
-           			 <button type="button" class="btn btn-primary btn-block" action><a href="?add=<?php echo($i); ?>">Add to cart</a></button>
+           			 <a href="?add=<?php echo($i); ?>"><button type="button" class="btn btn-primary btn-block" action>Add to cart</button></a>
           		</div>
           	</div>
 			</div>
