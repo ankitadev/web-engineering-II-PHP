@@ -1,3 +1,7 @@
+<?php
+// Start the session
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,8 +32,13 @@
 			  </div>
 			</nav>
 		</div>
-		<h1><small>Thank You for Shopping with us</small></h1>
+		<h1><small>Thank You <?php echo $_POST["firstName"]; ?> for Shopping with us</small></h1>
 		<h2><small>Your Items will be sent to</small></h2>
+		<?php echo $_POST["address"]; ?><br>
+		<?php echo $_POST["city"]; ?><br>
+		<?php echo $_POST["country"]; ?><br>
+		<?php echo $_POST["state"]; ?><br>
+		<?php echo $_POST["zipCode"]; ?><br>
 </div>
 </body>
 </html>
