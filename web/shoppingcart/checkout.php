@@ -50,35 +50,35 @@ echo $_SESSION['add'];
   <div>
     <label for="firstName">First Name:</label>
     <input type="firstName" class="form-control" name="firstName">
-  </div>
+  </div></br>
   <div class="form-group">
     <label for="lastName">Last Name:</label>
     <input type="lastName" class="form-control" name="lastName">
-  </div>
+  </div></br>
    <div class="form-group">
     <label for="email">Email:</label>
     <input type="email" class="form-control" name="email">
-  </div>
+  </div></br>
    <div class="form-group">
     <label for="address">Address:</label>
     <input type="address" class="form-control" name="address">
-  </div>
+  </div></br>
    <div class="form-group">
     <label for="city">City:</label>
     <input type="city" class="form-control" name="city">
-  </div>
+  </div></br>
    <div class="form-group">
     <label for="state">State:</label>
     <input type="state" class="form-control" name="state">
-  </div>
+  </div></br>
    <div class="form-group">
     <label for="country">Country:</label>
     <input type="country" class="form-control" name="country">
-  </div>
+  </div></br>
    <div class="form-group">
     <label for="zipCode">Zip Code:</label>
     <input type="zipCode" class="form-control" name="zipCode">
-  </div>
+  </div></br>
   <a href="?reset=true"><button type="submit" class="btn btn-success">Confirm Purchase</button></a>
 </form>
 </div>
