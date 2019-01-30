@@ -34,7 +34,7 @@ echo $_SESSION['add'];
 			</nav>
 		</div>
 		<form action="/action_page.php">
-  <div class="form-group">
+  <div class="form-inline" action="confirm.php">
     <label for="firstName">First Name:</label>
     <input type="firstName" class="form-control" id="firstName">
   </div>
@@ -43,30 +43,30 @@ echo $_SESSION['add'];
     <input type="lastName" class="form-control" id="lastName">
   </div>
    <div class="form-group">
-    <label for="email">Email</label>
+    <label for="email">Email:</label>
     <input type="email" class="form-control" id="email">
   </div>
    <div class="form-group">
-    <label for="address">Address</label>
+    <label for="address">Address:</label>
     <input type="address" class="form-control" id="address">
   </div>
    <div class="form-group">
-    <label for="city">City</label>
+    <label for="city">City:</label>
     <input type="city" class="form-control" id="city">
   </div>
    <div class="form-group">
-    <label for="state">State</label>
+    <label for="state">State:</label>
     <input type="state" class="form-control" id="state">
   </div>
    <div class="form-group">
-    <label for="country">Country</label>
+    <label for="country">Country:</label>
     <input type="country" class="form-control" id="country">
   </div>
    <div class="form-group">
-    <label for="zipCode">Zip Code</label>
+    <label for="zipCode">Zip Code:</label>
     <input type="zipCode" class="form-control" id="zipCode">
   </div>
-  <button type="submit" class="btn btn-default">Confirm Purchase</button>
+  <button type="submit" class="btn-success">Confirm Purchase</button>
 </form>
 </div>
 </body>

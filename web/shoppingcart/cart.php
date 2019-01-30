@@ -81,7 +81,7 @@ $_GET["i"] = $_SESSION["cart"];
 		 {
 		 ?>
 			 <tr>
-			 <td><?php echo( $products[$_SESSION["cart"][$i]] ); ?></td>
+			 <td><?php echo( $products[$_SESSION["products"][$i]] ); ?></td>
 			 <td width="10px">&nbsp;</td>
 			 <td><?php echo( $_SESSION["qty"][$i] ); ?></td>
 			 <td width="10px">&nbsp;</td>
@@ -102,10 +102,10 @@ $_GET["i"] = $_SESSION["cart"];
   <div class="col-sm-8">
   </div>
   <div class="col-sm-4">
-  	<button type="button" class="btn btn-danger"><a href="?reset=true">Reset Cart</a></button>
-  	<button type="button" class="btn btn-success"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Keep Shopping</a></button>
-  	<button type="button" class="btn btn-success">CheckOut</button>
-  </div>
+  	<a href="?reset=true"><button type="button" class="btn btn-danger">Reset Cart</button></a>
+  	<a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php"><button type="button" class="btn btn-success">Keep Shopping</button></a>
+  	<a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/checkout.php"><button type="button" class="btn btn-success">CheckOut</button>
+  </div></a>
 </div>
 </div>
 </body>
