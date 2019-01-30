@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+echo $_SESSION['add'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,6 +34,7 @@
 			  </div>
 			</nav>
 		</div>
+
 		<div class="panel panel-default">
 	    <div class="panel-footer">Panel Footer</div>
   	</div>
