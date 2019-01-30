@@ -26,7 +26,7 @@ session_start();
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 			  <div class="container-fluid">
 			    <div class="navbar-header">
-			      <li>Naruto Magaziiine</li>
+			      <a class="navbar-brand" href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Naruto Magaziiiine</a>
 			    </div>
 			    <ul class="nav navbar-nav">
 			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Home</a></li>
@@ -39,7 +39,9 @@ session_start();
 			</nav>
 		</div>
 		<div class="row">
-			
+			 <?php
+ for ($i=0; $i< count($products); $i++) {
+   ?>
 			<div class="col-sm-4">
 				<div class="thumbnail">
 				<img src="magazine1.jpeg" class="img-thumbnail" alt="Naruto Shippuden Summer 2009 Collector">
@@ -50,6 +52,9 @@ session_start();
           		</div>
           	</div>
 			</div>
+			 <?php
+ }
+ ?>
 		</div>
 		<div class="row">
 			<div class="col-sm-4">
