@@ -33,57 +33,28 @@ session_start();
 			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/about.php">About Us</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
-			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/about.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
 			    </ul>
 			  </div>
 			</nav>
 		</div>
 		<div class="row">
 			 <?php
- for ($i=0; $i< count($products); $i++) {
-   ?>
+			 for ($i=0; $i< count($products); $i++) {
+			   ?>
 			<div class="col-sm-4">
 				<div class="thumbnail">
 				<img src="magazine1.jpeg" class="img-thumbnail" alt="Naruto Shippuden Summer 2009 Collector">
 				<div class="caption">
            			 <p class="text-center text-muted"> <?php echo($products[$i]); ?> </p></br>
-           			 <p class="text-center text-muted"> <?php echo($amounts[$i]); ?> </p></br>
+           			 <p class="text-center text-muted">$ <?php echo($amounts[$i]); ?> </p></br>
            			 <button type="button" class="btn btn-primary btn-block"><a href="?add=<?php echo($i); ?>">Add to cart</a></button>
           		</div>
           	</div>
 			</div>
 			 <?php
- }
- ?>
-		</div>
-		<div class="row">
-			<div class="col-sm-4">
-				<div class="thumbnail">
-				<img src="magazine4.jpeg" class="img-thumbnail" alt="Naruto Shippuden Summer 2009 Collector">
-				<div class="caption">
-           			 <p class="text-center text-muted">Naruto Shippuden Summer 2009 Collector</p>
-           			 <button type="button" class="btn btn-primary btn-block">Add to Cart</button>
-          		</div>
-          	</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="thumbnail">
-				<img src="magazine5.jpeg" class="img-thumbnail" alt="Naruto Winter 2007/2008 Collector">
-				<div class="caption">
-	           		 <p class="text-center text-muted">Naruto Winter 2007/2008 Collector</p>
-	           		 <button type="button" class="btn btn-primary btn-block">Add to Cart</button>
-	         	</div>
-	         </div>
-			</div>
-			<div class="col-sm-4">
-				<div class="thumbnail">
-				<img src="magazine6.jpeg" class="img-thumbnail" alt="Naruto Collector 3">
-				<div class="caption">
-	            	<p class="text-center text-muted">Naruto Collector 3</p>
-	            	<button type="button" class="btn btn-primary btn-block">Add to Cart</button>
-	         	 </div>
-	         	</div>
-			</div>
+			 }
+			 ?>
 		</div>
 	<div class="panel panel-default">
 	    <div class="panel-footer">Panel Footer</div>
