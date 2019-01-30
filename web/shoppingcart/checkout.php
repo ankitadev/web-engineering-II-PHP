@@ -33,38 +33,54 @@ echo $_SESSION['add'];
 			  </div>
 			</nav>
 		</div>
-		<form class="form-inline" action="confirm.php" method="post">
+		<form class="form-horizontal" action="confirm.php" method="post">
   <div>
-    <label for="firstName">First Name:</label>
+    <label class="control-label col-sm-2" for="firstName">First Name:</label>
+    <div class="col-sm-10">
     <input type="firstName" class="form-control" name="firstName">
+</div>
   </div></br>
   <div class="form-group">
-    <label for="lastName">Last Name:</label>
+    <label class="control-label col-sm-2" for="lastName">Last Name:</label>
+    <div class="col-sm-10">
     <input type="lastName" class="form-control" name="lastName">
+</div>
   </div></br></br>
    <div class="form-group">
-    <label for="email">Email:</label>
+    <label class="control-label col-sm-2" for="email">Email:</label>
+    <div class="col-sm-10">
     <input type="email" class="form-control" name="email">
+</div>
   </div></br></br>
    <div class="form-group">
-    <label for="address">Address:</label>
+    <label class="control-label col-sm-2" for="address">Address:</label>
+    <div class="col-sm-10">
     <input type="address" class="form-control" name="address">
+</div>
   </div></br></br>
    <div class="form-group">
-    <label for="city">City:</label>
+    <label class="control-label col-sm-2" for="city">City:</label>
+    <div class="col-sm-10">
     <input type="city" class="form-control" name="city">
+</div>
   </div></br></br>
    <div class="form-group">
-    <label for="state">State:</label>
+    <label class="control-label col-sm-2" for="state">State:</label>
+    <div class="col-sm-10">
     <input type="state" class="form-control" name="state">
+</div>
   </div></br></br>
    <div class="form-group">
-    <label for="country">Country:</label>
+    <label class="control-label col-sm-2" for="country">Country:</label>
+    <div class="col-sm-10">
     <input type="country" class="form-control" name="country">
+</div>
   </div></br></br>
    <div class="form-group">
-    <label for="zipCode">Zip Code:</label>
+    <label class="control-label col-sm-2" for="zipCode">Zip Code:</label>
+    <div class="col-sm-10">
     <input type="zipCode" class="form-control" name="zipCode">
+</div>
   </div></br></br>
   <button type="submit" class="btn btn-success">Confirm Purchase</button>
 </form>
