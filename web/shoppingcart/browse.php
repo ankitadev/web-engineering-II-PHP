@@ -52,7 +52,7 @@ session_start();
 			   ?>
 			<div class="col-sm-4">
 				<div class="thumbnail">
-				<img src="magazine<?php echo([$i]); ?>.jpeg" class="img-thumbnail" alt="<?php echo($products[$i]); ?>">
+				<img src="magazine<?php echo"$i"; ?>.jpeg" class="img-thumbnail" alt="<?php echo($products[$i]); ?>">
 				<div class="caption">
            			 <p class="text-center text-muted"> <?php echo($products[$i]); ?> </p></br>
            			 <p class="text-center text-muted">$ <?php echo($amounts[$i]); ?> </p></br>
