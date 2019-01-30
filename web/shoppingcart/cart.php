@@ -82,7 +82,7 @@ $_GET["i"] = $_SESSION["cart"];
 		 {
 		 ?>
 			 <tr>
-			 <td><?php echo( $_SESSION["products"][$i]] ); ?></td>
+			 <td><?php echo( $_SESSION["products"][$i] ); ?></td>
 			 <td width="10px">&nbsp;</td>
 			 <td><?php echo( $_SESSION["qty"][$i] ); ?></td>
 			 <td width="10px">&nbsp;</td>
