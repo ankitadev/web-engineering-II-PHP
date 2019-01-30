@@ -34,7 +34,7 @@ echo $_SESSION['add'];
 			</nav>
 		</div>
 		<form class="form-horizontal" action="confirm.php" method="post">
-  <div class="form-group">>
+  <div class="form-group">
     <label class="control-label col-sm-2" for="firstName">First Name:</label>
     <div class="col-sm-4">
     <input type="firstName" class="form-control" name="firstName">
