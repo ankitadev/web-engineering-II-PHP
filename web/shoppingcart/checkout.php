@@ -17,6 +17,19 @@ echo $_SESSION['add'];
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<?php
+	//Reset
+	 if ( isset($_GET['reset']) )
+	 {
+	 if ($_GET["reset"] == 'true')
+	   {
+	   unset($_SESSION["qty"]); //The quantity for each product
+	   unset($_SESSION["amounts"]); //The amount from each product
+	   unset($_SESSION["total"]); //The total cost
+	   unset($_SESSION["cart"]); //Which item has been chosen
+	   }
+	 }
+	 ?>
 <div class="container-fluid">
 		<div class="page-header">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -66,7 +79,7 @@ echo $_SESSION['add'];
     <label for="zipCode">Zip Code:</label>
     <input type="zipCode" class="form-control" name="zipCode">
   </div>
-  <button type="submit" class="btn btn-success">Confirm Purchase</button>
+  <a href="?reset=true"><button type="submit" class="btn btn-success">Confirm Purchase</button></a>
 </form>
 </div>
 </body>

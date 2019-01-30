@@ -34,11 +34,12 @@ session_start();
 		</div>
 		<h1><small>Thank You <?php echo $_POST["firstName"]; ?> for Shopping with us</small></h1>
 		<h2><small>Your Items will be sent to</small></h2>
+		<h2><small>
 		<?php echo $_POST["address"]; ?><br>
 		<?php echo $_POST["city"]; ?><br>
 		<?php echo $_POST["country"]; ?><br>
 		<?php echo $_POST["state"]; ?><br>
-		<?php echo $_POST["zipCode"]; ?><br>
+		<?php echo $_POST["zipCode"]; ?><br></small></h2>
 </div>
 </body>
 </html>
