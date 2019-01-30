@@ -30,7 +30,6 @@ session_start();
    $_SESSION["cart"][$i] = $i;
    $_SESSION["qty"][$i] = $qty;
  }
-
 ?>
 	<div class="container-fluid">
 		<div class="page-header">
@@ -41,7 +40,6 @@ session_start();
 			    </div>
 			    <ul class="nav navbar-nav">
 			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Home</a></li>
-			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/about.php">About Us</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
 			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/cart.php"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>

@@ -21,12 +21,11 @@ echo $_SESSION['add'];
 		<div class="page-header">
 			<nav class="navbar navbar-inverse navbar-fixed-top">
 			  <div class="container-fluid">
-			    <div class="navbar-header">
-			      Naruto Magaziiine
+			   <div class="navbar-header">
+			      <a class="navbar-brand" href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Naruto Magaziiiine</a>
 			    </div>
 			    <ul class="nav navbar-nav">
 			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/browse.php">Home</a></li>
-			      <li><a href="https://thawing-mountain-32172.herokuapp.com/shoppingcart/about.php">About Us</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
 			      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
@@ -34,10 +33,41 @@ echo $_SESSION['add'];
 			  </div>
 			</nav>
 		</div>
-
-		<div class="panel panel-default">
-	    <div class="panel-footer">Panel Footer</div>
-  	</div>
+		<form action="/action_page.php">
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="firstName" class="form-control" id="firstName">
+  </div>
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input type="lastName" class="form-control" id="lastName">
+  </div>
+   <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+   <div class="form-group">
+    <label for="address">Address</label>
+    <input type="address" class="form-control" id="address">
+  </div>
+   <div class="form-group">
+    <label for="city">City</label>
+    <input type="city" class="form-control" id="city">
+  </div>
+   <div class="form-group">
+    <label for="state">State</label>
+    <input type="state" class="form-control" id="state">
+  </div>
+   <div class="form-group">
+    <label for="country">Country</label>
+    <input type="country" class="form-control" id="country">
+  </div>
+   <div class="form-group">
+    <label for="zipCode">Zip Code</label>
+    <input type="zipCode" class="form-control" id="zipCode">
+  </div>
+  <button type="submit" class="btn btn-default">Confirm Purchase</button>
+</form>
 </div>
 </body>
 </html>
