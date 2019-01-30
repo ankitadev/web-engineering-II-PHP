@@ -1,7 +1,7 @@
 <?php
 // Start the session
 session_start();
-echo $_SESSION['add'];
+$_GET["add"] = $_SESSION["cart"];
 ?>
 <!DOCTYPE html>
 <html>
