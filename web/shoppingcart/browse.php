@@ -39,24 +39,18 @@ session_start();
 			</nav>
 		</div>
 		<div class="row">
-			<?php
-			for ($i=1; i<=3;i++)
-			{
-			?>
+			
 			<div class="col-sm-4">
 				<div class="thumbnail">
 				<img src="magazine1.jpeg" class="img-thumbnail" alt="Naruto Shippuden Summer 2009 Collector">
 				<div class="caption">
-           			 <p class="text-center text-muted"><?php echo($products[$i]); ?></p></br>
-           			 <p class="text-center text-muted"><?php echo($amounts[$i]); ?></p></br>
+           			 <p class="text-center text-muted"> <?php echo($products[$i]); ?> </p></br>
+           			 <p class="text-center text-muted"> <?php echo($amounts[$i]); ?> </p></br>
            			 <button type="button" class="btn btn-primary btn-block"><a href="?add=<?php echo($i); ?>">Add to cart</a></button>
           		</div>
           	</div>
 			</div>
 		</div>
-		<?php
-		}
-		?>
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="thumbnail">
