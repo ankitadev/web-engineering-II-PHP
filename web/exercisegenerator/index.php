@@ -35,56 +35,28 @@ echo $_SESSION['add'];
 		</div>
 		<h1><small>Answer questions below to find the best workout to help you reach your goals!</small></h1>
 		<form class="form-horizontal" action="confirm.php" method="post">
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="firstName">Fitness Level</label>
-    <div class="col-sm-4">
-    <input type="firstName" class="form-control" name="firstName">
+      <h3><small>Your fitness level?</small></h3>
+  <div class="form-check">
+  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
+  <label class="form-check-label" for="materialUnchecked">Intermediate</label>
 </div>
-  </div></br>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="lastName">Last Name:</label>
-    <div class="col-sm-4">
-    <input type="lastName" class="form-control" name="lastName">
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
+  <label class="form-check-label" for="materialUnchecked">Advanced</label>
 </div>
-  </div></br>
-   <div class="form-group">
-    <label class="control-label col-sm-2" for="email">Email:</label>
-    <div class="col-sm-4">
-    <input type="email" class="form-control" name="email">
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
+  <label class="form-check-label" for="materialUnchecked">Material unchecked</label>
 </div>
-  </div></br>
-   <div class="form-group">
-    <label class="control-label col-sm-2" for="address">Address:</label>
-    <div class="col-sm-6">
-    <input type="address" class="form-control" name="address">
+<h3><small>Type of workout</small></h3>
+  <div class="form-check">
+  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
+  <label class="form-check-label" for="materialUnchecked">Cardio</label>
 </div>
-  </div></br>
-   <div class="form-group">
-    <label class="control-label col-sm-2" for="city">City:</label>
-    <div class="col-sm-4">
-    <input type="city" class="form-control" name="city">
-</div>
-  </div></br>
-   <div class="form-group">
-    <label class="control-label col-sm-2" for="state">State:</label>
-    <div class="col-sm-4">
-    <input type="state" class="form-control" name="state">
-</div>
-  </div></br>
-   <div class="form-group">
-    <label class="control-label col-sm-2" for="country">Country:</label>
-    <div class="col-sm-4">
-    <input type="country" class="form-control" name="country">
-</div>
-  </div></br>
-   <div class="form-group">
-    <label class="control-label col-sm-2" for="zipCode">Zip Code:</label>
-    <div class="col-sm-2">
-    <input type="zipCode" class="form-control" name="zipCode">
-</div>
-  </div></br>
-   <div class="col-sm-4">
-  <button type="submit" class="btn btn-success">Confirm Purchase</button>
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
+  <label class="form-check-label" for="materialUnchecked">Lifting</label>
+</div>s="form-check-label" for="materialUnchecked">Material unchecked</label>
 </div>
 </form>
 </div>
