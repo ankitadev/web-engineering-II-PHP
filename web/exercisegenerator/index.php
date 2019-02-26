@@ -35,7 +35,7 @@ echo $_SESSION['add'];
 		</div>
     <div class="row">
   <div class="col-sm-4">
-    <img src="gym.jpg" alt="jpeg">
+    <img src="gym.jpeg" alt="jpeg">
   </div>
   <div class="col-sm-8">
     <h1><small>Answer questions below to find the best workout to help you reach your goals!</small></h1>
