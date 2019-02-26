@@ -33,7 +33,6 @@ session_start(); ?>
 		 @$_SESSION['score'] += 1 ;
 	 }
 }
- 
  ?> 
  
  
