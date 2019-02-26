@@ -1,91 +1,47 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-    <head>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-        <title>
-            sample quiz code
-        </title>
-<style type="text/css">
-</style>
-    </head>
-    <body>
-<?php
-print '<form action="display_code_2.php" method="post">';
-//BEGINNING OF QUESTION ONE 
-print '<p>(1) The capital of Egypt is</p>';
-if ($_POST['answer1']=="a")
-print '<input type="radio" checked="checked" name="answer1" value="a"/>Alexandria<br/>';
-else
-print '<p><input type="radio" name="answer1" value="a"/>Alexandria<br/>';
-if ($_POST['answer1']=="b")
-print '<input type="radio" checked="checked" name="answer1" value="b"/>Nairobi<br/>';
-else
-print '<input type="radio" name="answer1" value="b"/>Nairobi<br/>';
-if ($_POST['answer1']=="c")
-print '<input type="radio" checked="checked" name="answer1" value="c"/>Mombasa<br/>';
-else
-print '<input type="radio" name="answer1" value="c"/>Mombasa<br/>';
-if ($_POST['answer1']=="d"){
-print '<input type="radio" checked="checked" name="answer1" value="d"/>Cairo<br/>';
-$correct++;
+<!DOCTYPE>
+<html>
+<?php require 'dbconfig.php';
+session_start(); ?>
+<head>
+<title>Technopoints Quiz</title>
+<span class="crayon-o"><</span><span class="crayon-e">link </span><span class="crayon-v">rel</span><span class="crayon-o">=</span><span class="crayon-s">"stylesheet"</span> <span class="crayon-v">href</span><span class="crayon-o">=</span><span class="crayon-s">"index.css"</span><span class="crayon-o">></span>
+</head>
+<body><center>
+<div class="title">Technopoints.co.in</div>
+<?php 															
+<div class="bump"><br><form> <button class="button" name="start"><span>START QUIZ</span></button> </form></div>
+<form action="" method="post">  				
+<table><?php if(isset($c)) {   $fetchqry = "SELECT * FROM `quiz` where id='$c'"; 
+				$result=mysqli_query($con,$fetchqry);
+				$num=mysqli_num_rows($result);
+				$row = mysqli_fetch_array($result,MYSQLI_ASSOC); }
+		  ?>
+<tr><td><h3><br><?php echo @$row['que'];?></h3></td></tr> <?php if($_SESSION['clicks'] > 0 && $_SESSION['clicks'] < 6){ ?>
+  <tr><td><input required type="radio" name="userans" value="<?php echo $row['option 1'];?>">&nbsp;<?php echo $row['option 1']; ?><br>
+  <tr><td><input required type="radio" name="userans" value="<?php echo $row['option 2'];?>">&nbsp;<?php echo $row['option 2'];?></td></tr>
+  <tr><td><input required type="radio" name="userans" value="<?php echo $row['option 3'];?>">&nbsp;<?php echo $row['option 3']; ?></td></tr>
+  <tr><td><input required type="radio" name="userans" value="<?php echo $row['option 4'];?>">&nbsp;<?php echo $row['option 4']; ?><br><br><br></td></tr>
+  <tr><td><button class="button3" name="click" >Next</button></td></tr> <?php }  
+																	?> 
+  <form>
+ <?php if($_SESSION['clicks']>5){ 
+	$qry3 = "SELECT `ans`, `userans` FROM `quiz`;";
+	$result3 = mysqli_query($con,$qry3);
+	$storeArray = Array();
+	while ($row3 = mysqli_fetch_array($result3, MYSQLI_ASSOC)) {
+     if($row3['ans']==$row3['userans']){
+		 @$_SESSION['score'] += 1 ;
+	 }
 }
-else
-print '<input type="radio" name="answer1" value="d"/>Cairo<br/></p>';
-print '<p>(2) The capital of Honduras is</p>';
-if ($_POST['answer2']=="a"){
-print '<p><input type="radio" checked="checked" name="answer2" value="a"/>Tegucigalpa<br/>';
-$correct++;
-}
-else
-print '<p><input type="radio" name="answer2" value="a"/>Tegucigalpa<br/>';
-if ($_POST['answer2']=="b")
-print '<input type="radio" checked="checked" name="answer2" value="b"/>San Salvador<br/>';
-else
-print '<input type="radio" name="answer2" value="b"/>San Salvador<br/>';
-if ($_POST['answer2']=="c")
-print '<input type="radio" checked="checked" name="answer2" value="c"/>Belmopan<br/>';
-else
-print '<input type="radio" name="answer2" value="c"/>Belmopan<br/>';
-if ($_POST['answer2']=="d")
-print '<input type="radio" checked="checked" name="answer2" value="d"/>Mazatenango<br/>';
-else
-print '<input type="radio" name="answer2" value="d"/>Mazatenango<br/><br/></p>';
-print '<p>(3) The capital of Cambodia is</p>';
-if ($_POST['answer3']=="a")
-print '<input type="radio" checked="checked" name="answer3" value="a"/>Kuala Lumpur<br/>';
-else
-print '<input type="radio" name="answer3" value="a"/>Kuala Lumpur<br/>';
-if ($_POST['answer3']=="b"){
-print '<input type="radio" checked="checked" name="answer3" value="b"/>Phnom Penh<br>';
-$correct++;
-}
-else
-print '<input type="radio" name="answer3" value="b"/>Phnom Penh<br/>';
-if ($_POST['answer3']=="c")
-print '<input type="radio" checked="checked" name="answer3" value="c"/>Bangkok<br/>';
-else
-print '<input type="radio" name="answer3" value="c"/>Bangkok<br/>';
-if ($_POST['answer3']=="d")
-print '<input type="radio" checked="checked" name="answer3" value="d"/>Saigon<br/><br/>';
-else
-print '<input type="radio" name="answer3" value="d"/>Saigon<br/><br/>';
-foreach ($_POST as $value){
-if (isset ($value)){
-$done++;
-}
-}
-if ($done !=4)
-print '<input type="submit" name="submit" value="check answers" /><br/><br/>';
-if (($done > 0)&&($done < 4))
-print 'You haven&#8217;t answered all the questions. Please finish the quiz and re-submit your answers.';
-if($done==4){
-if ($correct==0)
-$correct="0";
-print "Your score is $correct/3.<br/><br/>";
-print 'The correct answers: (1) Cairo&nbsp;&nbsp; (2) Tegucigalpa&nbsp;&nbsp; (3) Phnom Penh';
-}
-print '</form>';
-?>
-    </body>
+ 
+ ?> 
+ 
+ 
+ <h2>Result</h2>
+ <span>No. of Correct Answer:&nbsp;<?php echo $no = @$_SESSION['score']; 
+ session_unset(); ?></span><br>
+ <span>Your Score:&nbsp<?php echo $no*2; ?></span>
+<?php } ?>
+</center>
+</body>
 </html>
