@@ -28,13 +28,18 @@ echo $_SESSION['add'];
 			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/exercisegenerator/about.php">About Us</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
-			      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+			      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Logout</a></li>
 			    </ul>
 			  </div>
 			</nav>
 		</div>
-		<h1><small>Answer questions below to find the best workout to help you reach your goals!</small></h1>
-		<form class="form-horizontal" action="confirm.php" method="post">
+    <div class="row">
+  <div class="col-sm-4">
+    <img src="gym.jpg" alt="jpeg">
+  </div>
+  <div class="col-sm-8">
+    <h1><small>Answer questions below to find the best workout to help you reach your goals!</small></h1>
+    <form class="form-horizontal" action="confirm.php" method="post">
       <h3><small>Your fitness level?</small></h3>
   <div class="form-check">
   <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
@@ -58,6 +63,13 @@ echo $_SESSION['add'];
   <label class="form-check-label" for="materialUnchecked">Lifting</label>
 </div>
 </form>
+
+  </div>
+</div>
+
+
+
+		
 </div>
 </body>
 </html>
