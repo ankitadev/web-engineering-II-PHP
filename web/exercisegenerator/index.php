@@ -56,7 +56,6 @@ echo $_SESSION['add'];
 <div class="form-check">
   <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
   <label class="form-check-label" for="materialUnchecked">Lifting</label>
-</div>s="form-check-label" for="materialUnchecked">Material unchecked</label>
 </div>
 </form>
 </div>
