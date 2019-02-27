@@ -76,11 +76,11 @@ if ($badLogin)
 }
 ?>
 
-<h1>Please sign in below:</h1>
+<div class="well well-sm"><span class="glyphicon glyphicon-log-in"></span> Sign In</div>
 
 
 <div class="row">
-  <div class="col-sm-4">.col-sm-4</div>
+  <div class="col-sm-4"><img src="background.jpeg" alt="jpeg"></div>
   <div class="col-sm-8">
   	
 
@@ -94,7 +94,7 @@ if ($badLogin)
 	<label for="txtPassword">Password</label>
 	<br /><br />
 
-	<input type="submit" value="Sign In" />
+	<input type="submit" class="btn btn-success" value="Sign In" />
 
 </form>
 <br /><br />
