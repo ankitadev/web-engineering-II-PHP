@@ -56,6 +56,14 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 <html>
 <head>
 	<title>Sign In</title>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -70,7 +78,13 @@ if ($badLogin)
 
 <h1>Please sign in below:</h1>
 
-<form id="mainForm" action="signIn.php" method="POST">
+
+<div class="row">
+  <div class="col-sm-4">.col-sm-4</div>
+  <div class="col-sm-8">
+  	
+
+  	<form id="mainForm" action="signIn.php" method="POST">
 
 	<input type="text" id="txtUser" name="txtUser" placeholder="Username">
 	<label for="txtUser">Username</label>
@@ -83,10 +97,18 @@ if ($badLogin)
 	<input type="submit" value="Sign In" />
 
 </form>
-
 <br /><br />
 
 Or <a href="signUp.php">Sign up</a> for a new account.
+
+
+  </div>
+</div>
+
+
+
+
+
 
 </div>
 
