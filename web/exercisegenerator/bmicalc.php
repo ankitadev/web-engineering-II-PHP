@@ -1,3 +1,18 @@
+<?php
+// Start the session
+session_start();
+echo $_SESSION['add'];
+if (isset($_SESSION['username']))
+{
+  $username = $_SESSION['username'];
+}
+else
+{
+  header("Location: signIn.php");
+  die(); // we always include a die after redirects.
+}
+
+?>
 <!DOCTYPE html>
 <html class="sinInHTML">
 <head>
@@ -27,12 +42,8 @@
     </ul>
   </div>
 </nav>
+<div class="col-sm-6">
 <h2 class= "signInH2">BMI Calculator</h2>
-<?php
-    $course_name = $course['name'];
-    $course_code = $course['course_code'];
-    echo "<h1>Notes for course:  $course_code - $course_name</h1>";
-?>
     <form action="insert_bmi.php" method="post">
         <input type="date" name="date" /><br />
         <input type="hidden" name="course_id" value="<?php echo $course_id; ?>">
@@ -45,15 +56,15 @@
 
     <form class="form-horizontal" action="insert_bmi.php" method="post">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="txtUser">Weight(lb): </label>
+      <label class="control-label col-sm-2" for="weight">Weight: </label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="txtUser" placeholder="Username" name="txtUser">
+        <input type="text" class="form-control" id="weight" placeholder="Weight (lb)" name="weight">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="txtPassword">Height(eg:6.4): </label>
+      <label class="control-label col-sm-2" for="height">Height: </label>
       <div class="col-sm-10">          
-        <input type="password" class="form-control" id="txtPassword" placeholder="Password" name="txtPassword">
+        <input type="password" class="form-control" id="height" placeholder="Height (eg : 6.4)" name="height">
       </div>
     </div>
     <div class="form-group">        
@@ -68,12 +79,13 @@
 
 <?php
 
-foreach ($notes as $note) {
-    $date = $note['date'];
-    $content = $note['content'];
-
-    echo "<p>Date: $date</p>";
-    echo "<p>$content</p>";
+foreach ($bmi as $bmi) {
+    $weight = $bmi['weight'];
+    $height = $bmi['height'];
+    $weightin = $weight * 12;
+    $bmicalc = ($height / ($weightin * $weightin)) * 703
+    
+    echo "<p>Your BMI on " .date("Y/m/d"). "  is: $bmicalc</p>";
 }
 
 ?>
@@ -111,6 +123,7 @@ foreach ($notes as $note) {
       </tr>
     </tbody>
   </table>
+</div>
 </div>
 </div>
 </body>
