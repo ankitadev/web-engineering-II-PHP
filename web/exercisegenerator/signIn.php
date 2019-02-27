@@ -104,9 +104,7 @@ if ($badLogin)
       </div>
     </div>
   </form>
-
-<br />
-<h3 class= "signInH2"><small>Or <a href="signUp.php">Sign up</a> for a new account.</small></h3>
+<h3 class= "signInH2"><small class="h3signin">Or <a href="signUp.php">Sign up</a> for a new account.</small></h3>
 
 
   </div>

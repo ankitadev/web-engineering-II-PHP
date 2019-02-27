@@ -16,7 +16,7 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Workout Calculator</title>
+	<title>Fitness Calculator</title>
 	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -25,63 +25,46 @@ else
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-<div class="container-fluid">
-		<div class="page-header">
-			<nav class="navbar navbar-inverse navbar-fixed-top">
-			  <div class="container-fluid">
-			   <div class="navbar-header">
-			      <a class="navbar-brand" href="https://thawing-mountain-32172.herokuapp.com/exercisegenerator/index.php">Workout Generator</a>
-			    </div>
-			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/exercisegenerator/about.php">About Us</a></li>
-			    </ul>
-			 	<ul class="nav navbar-nav navbar-right">
+<div>
+
+<div class="row">
+  <div class="col-sm-4"><img style="width: 100%" src="background2.jpeg" alt="jpeg"></div>
+  <div class="col-sm-8">
+  	<nav class="navbar navbar-inverse">
+  		<p class="navbar-text"><a class="navbar-brand" href="https://thawing-mountain-32172.herokuapp.com/exercisegenerator/index.php">Fitness Calculator</a></p>
+  		<ul class="nav navbar-nav navbar-right">
 			 	<li><a href="signOut.php"><span class="glyphicon glyphicon-user"></span> <?= $username ?></a></li>
 			      <li><a href="signOut.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 			      
 			    </ul>
-			  </div>
-			</nav>
-		</div>
-    <div class="row">
-  <div class="col-sm-4">
-    <img src="gym.jpeg" alt="jpeg">
-  </div>
-  <div class="col-sm-8">
-    <h1><small>Answer questions below to find the best workout to help you reach your goals!</small></h1>
-    <form class="form-horizontal" action="confirm.php" method="post">
-      <h3><small>Your fitness level?</small></h3>
-  <div class="form-check">
-  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
-  <label class="form-check-label" for="materialUnchecked">Intermediate</label>
-</div>
-<div class="form-check">
-  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
-  <label class="form-check-label" for="materialUnchecked">Advanced</label>
-</div>
-<div class="form-check">
-  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
-  <label class="form-check-label" for="materialUnchecked">Material unchecked</label>
-</div>
-<h3><small>Type of workout</small></h3>
-  <div class="form-check">
-  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
-  <label class="form-check-label" for="materialUnchecked">Cardio</label>
-</div>
-<div class="form-check">
-  <input type="radio" class="form-check-input" id="materialUnchecked" name="materialExampleRadios">
-  <label class="form-check-label" for="materialUnchecked">Lifting</label>
-</div>
-</form>
+	</nav>
+<h2 class= "signInH2">Answer questions below to find the best workout to help you reach your goals!</h2>
+  <form class="form-horizontal" id="mainForm" action="submit.php" method="POST">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="txtUser">Username: </label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="txtUser" placeholder="Username" name="txtUser">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="txtPassword">Password: </label>
+      <div class="col-sm-10">          
+        <input type="password" class="form-control" id="txtPassword" placeholder="Password" name="txtPassword">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-success" value="Submit" />
+      </div>
+    </div>
+  </form>
 
   </div>
 </div>
-
-
-
-		
 </div>
 </body>
 </html>
