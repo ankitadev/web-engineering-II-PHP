@@ -76,13 +76,18 @@ if ($badLogin)
 }
 ?>
 
-<div class="well well-sm"><span class="glyphicon glyphicon-log-in"></span> Sign In</div>
-
+<div class="page-header">
+			<nav class="navbar navbar-inverse">
+  
+  <p class="navbar-text">Welcome TO The Workout Calculator</p>
+</nav>
+		</div>
 
 <div class="row">
-  <div class="col-sm-4"><img src="background.jpeg" alt="jpeg"></div>
+  <div class="col-sm-4"><img style="width: 100%" src="background.jpeg" alt="jpeg"></div>
   <div class="col-sm-8">
-  	
+  	<h1><small>Sign In</small></h1>
+
 
   	<form id="mainForm" action="signIn.php" method="POST">
 
