@@ -17,7 +17,7 @@
 <div>
 
 <div class="row">
-  <div class="col-sm-4"><img style="width: 100%" src="background.jpeg" alt="jpeg"></div>
+  <div class="col-sm-4"><img style="width: 100%" src="background3.jpeg" alt="jpeg"></div>
   <div class="col-sm-8">
   	<nav class="navbar navbar-inverse">
   
