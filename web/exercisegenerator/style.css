@@ -1,5 +1,4 @@
-@media (min-width: 768px)
-.navbar 
+nav.navbar.navbar-inverse
 {
 	border-radius: 0px;
 }
@@ -7,4 +6,12 @@
 	padding-right: 0px;
     padding-left: 0px;
 }
-html { overflow-y: hidden; }
+.form-control {
+	    margin-left: 10px;
+    width: 90%;
+}
+h2.signInH2{
+    margin-left: 22px;}
+html.sinInHTML{
+	overflow-x: hidden; overflow-y: hidden;
+}

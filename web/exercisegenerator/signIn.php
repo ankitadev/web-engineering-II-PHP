@@ -53,7 +53,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 ?>
 
 <!DOCTYPE html>
-<html>
+<html class="sinInHTML">
 <head>
 	<title>Sign In</title>
 	<meta charset="utf-8"> 
@@ -82,9 +82,9 @@ if ($badLogin)
   <div class="col-sm-8">
   	<nav class="navbar navbar-inverse">
   
-  <p class="navbar-text">Welcome tO The Fitness Calculator</p>
+  <p class="navbar-text">Welcome to The Fitness Calculator</p>
 </nav>
-<h2>Sign In</h2>
+<h2 class= "signInH2">Sign In</h2>
   <form class="form-horizontal" id="mainForm" action="signIn.php" method="POST">
     <div class="form-group">
       <label class="control-label col-sm-2" for="txtUser">Username: </label>
@@ -105,21 +105,12 @@ if ($badLogin)
     </div>
   </form>
 
-
-
-<br /><br />
-
-Or <a href="signUp.php">Sign up</a> for a new account.
+<br />
+<h2 class= "signInH2"><small>Or <a href="signUp.php">Sign up</a> for a new account.</small></h2>
 
 
   </div>
 </div>
-
-
-
-
-
-
 </div>
 
 </body>
