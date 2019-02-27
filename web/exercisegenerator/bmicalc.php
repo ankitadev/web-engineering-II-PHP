@@ -83,9 +83,11 @@ foreach ($bmi as $bmi) {
     $weight = $bmi['weight'];
     $height = $bmi['height'];
     $weightin = $weight * 12;
-    $bmicalc = ($height / ($weightin * $weightin)) * 703
-    
-    echo "<p>Your BMI on " .date("Y/m/d"). "  is: $bmicalc</p>";
+    $bmicalc = ($height / ($weightin * $weightin)) * 703;
+
+
+echo "Today is " . date("Y/m/d") . "<br>";
+    echo "<p>Your BMI is: $bmicalc</p>";
 }
 
 ?>
