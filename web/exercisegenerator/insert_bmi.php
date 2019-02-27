@@ -1,6 +1,6 @@
 <?php
-$weight = htmlspecialchars($_POST['weight'])
-$height = htmlspecialchars($_POST['height'])
+$weight = htmlspecialchars($_POST['weight']);
+$height = htmlspecialchars($_POST['height']);
 
 //echo "Trying to insert: courseid: $course_id, date: $date, content: $content";
 

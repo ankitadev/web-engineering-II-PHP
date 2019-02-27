@@ -64,7 +64,7 @@ else
     <div class="form-group">
       <label class="control-label col-sm-2" for="height">Height: </label>
       <div class="col-sm-10">          
-        <input type="password" class="form-control" id="height" placeholder="Height (eg : 6.4)" name="height">
+        <input type="text" class="form-control" id="height" placeholder="Height (eg : 6.4)" name="height">
       </div>
     </div>
     <div class="form-group">        
