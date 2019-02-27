@@ -40,7 +40,7 @@ else
       <a class="navbar-brand" href="https://thawing-mountain-32172.herokuapp.com/exercisegenerator/index.php">Fitness Calculator</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span><?= $username ?></a></li>
+      <li><span class="glyphicon glyphicon-user"></span><?= $username ?></li>
       <li><a href="signOut.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
   </div>
@@ -48,21 +48,16 @@ else
 <h2 class= "signInH2">Answer questions below to find your progress!</h2>
   <form class="form-horizontal" id="mainForm" action="submit.php" method="POST">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="txtUser">Username: </label>
-      <div class="col-sm-10">
-        <input type="text" class="form-control" id="txtUser" placeholder="Username" name="txtUser">
-      </div>
+<button type="button" class="btn btn-default btn-block">Medium</button>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="txtPassword">Password: </label>
-      <div class="col-sm-10">          
-        <input type="password" class="form-control" id="txtPassword" placeholder="Password" name="txtPassword">
-      </div>
+<button type="button" class="btn btn-default btn-block">Medium</button>
     </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <input type="submit" class="btn btn-success" value="Submit" />
-      </div>
+        <div class="form-group">
+<button type="button" class="btn btn-default btn-block">Medium</button>
+    </div>
+        <div class="form-group">
+<button type="button" class="btn btn-default btn-block">Medium</button>
     </div>
   </form>
 
