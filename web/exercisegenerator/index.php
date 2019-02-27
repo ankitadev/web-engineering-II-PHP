@@ -40,23 +40,14 @@ else
       <a class="navbar-brand" href="https://thawing-mountain-32172.herokuapp.com/exercisegenerator/index.php">Fitness Calculator</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span><?= $username ?></a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> <?= $username ?></a></li>
       <li><a href="signOut.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
 <h2 class= "signInH2">Answer questions below to find your progress!</h2>
     <div class="form-group">
-<a href="signOut.php"><button type="button" class="btn btn-default btn-block">BMI Calculator</button></a>
-    </div>
-    <div class="form-group">
-<button type="button" class="btn btn-default btn-block">Medium</button>
-    </div>
-        <div class="form-group">
-<button type="button" class="btn btn-default btn-block">Medium</button>
-    </div>
-        <div class="form-group">
-<button type="button" class="btn btn-default btn-block">Medium</button>
+<a href="bmicalc.php"><button type="button" class="btn btn-default btn-block">BMI Calculator</button></a>
     </div>
   </div>
 </div>
