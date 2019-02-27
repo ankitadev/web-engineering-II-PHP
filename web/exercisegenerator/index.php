@@ -2,6 +2,16 @@
 // Start the session
 session_start();
 echo $_SESSION['add'];
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+	header("Location: signIn.php");
+	die(); // we always include a die after redirects.
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,7 +38,9 @@ echo $_SESSION['add'];
 			      <li class="active"><a href="https://thawing-mountain-32172.herokuapp.com/exercisegenerator/about.php">About Us</a></li>
 			    </ul>
 			 	<ul class="nav navbar-nav navbar-right">
-			      <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Logout</a></li>
+			 	<li><a href="signOut.php"><span class="glyphicon glyphicon-user"></span> <?= $username ?></a></li>
+			      <li><a href="signOut.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+			      
 			    </ul>
 			  </div>
 			</nav>
