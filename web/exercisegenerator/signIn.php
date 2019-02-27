@@ -64,6 +64,7 @@ if (isset($_POST['txtUser']) && isset($_POST['txtPassword']))
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -81,18 +82,18 @@ if ($badLogin)
   <div class="col-sm-8">
   	<nav class="navbar navbar-inverse">
   
-  <p class="navbar-text">Welcome TO The Workout Calculator</p>
+  <p class="navbar-text">Welcome tO The Fitness Calculator</p>
 </nav>
 <h2>Sign In</h2>
   <form class="form-horizontal" id="mainForm" action="signIn.php" method="POST">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="txtUser">Username:</label>
+      <label class="control-label col-sm-2" for="txtUser">Username: </label>
       <div class="col-sm-10">
         <input type="text" class="form-control" id="txtUser" placeholder="Username" name="txtUser">
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="txtPassword">Password:</label>
+      <label class="control-label col-sm-2" for="txtPassword">Password: </label>
       <div class="col-sm-10">          
         <input type="password" class="form-control" id="txtPassword" placeholder="Password" name="txtPassword">
       </div>
