@@ -100,14 +100,12 @@ function category($BMI)
     </div>
   </form>
   <?php
-    if (isset($_POST['height'])){
       $height = $_POST['height'];
       $weight = $_POST['weight'];
       $bmical = bmicalc($height,$weight);
       $typecalc = category($bmical);
       echo "<h4><small>BMI of $weight weight and $height height is $bmical. Falls under $typecalc</small></h4>";
-    }
-
+      
     foreach ($calculation as $bmi) {
     $id = $bmi['id'];
     $weight = $bmi['weight'];
