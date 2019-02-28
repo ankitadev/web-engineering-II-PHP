@@ -11,6 +11,7 @@ else
   header("Location: signIn.php");
   die(); // we always include a die after redirects.
 }
+?>
 <!DOCTYPE html>
 <html class="sinInHTML">
 <head>
