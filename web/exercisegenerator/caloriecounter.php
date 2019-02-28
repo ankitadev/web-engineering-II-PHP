@@ -19,10 +19,10 @@ $db = get_db();
 
 $course_id = htmlspecialchars($_GET["course_id"]);
 
-$query = 'SELECT id, gender, age, weight, height FROM calories';
+$query = 'SELECT id, gender, age, weight, height, cal FROM calories';
 $statement = $db->prepare($query);
 $statement->execute();
-$notes = $statement->fetchAll(PDO::FETCH_ASSOC);
+$calo = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -106,11 +106,18 @@ $notes = $statement->fetchAll(PDO::FETCH_ASSOC);
 				}
 
 
-foreach ($notes as $note) {
+foreach ($calo as $calories) {
     $date = $note['date'];
     $content = $note['content'];
 
-    echo "<p>Date: $gender</p>";
+    $id = $calories['id'];
+    $age = $calories['age'];
+    $gender = $calories['gender'];
+    $weight = $calories['weight'];
+    $height = $calories['height'];
+    $cal = $calories['cal'];
+
+    echo "<p>Date: $cal</p>";
 }
 
 ?>
