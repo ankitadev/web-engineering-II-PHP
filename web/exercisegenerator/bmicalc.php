@@ -108,6 +108,7 @@ function category($BMI)
     $weight = $bmi['weight'];
     $height = $bmi['height'];
     $bmical = $bmi['bmical'];
+    $bmical = bmicalc($height,$weight);
     $typecalc = category($bmical);
 
     echo "<h4><small>BMI of $weight weight and $height height is $bmical which falls under $typecalc</small></h4>";
