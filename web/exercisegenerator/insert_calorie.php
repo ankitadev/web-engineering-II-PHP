@@ -21,6 +21,6 @@ $result = $statement->execute();
 
 //echo "$result";
 flush();
-header("Location:caloriecounter.php?cal=$cal");
+header("Location:caloriecounter.php?weight=$weight");
 die();
 ?>
