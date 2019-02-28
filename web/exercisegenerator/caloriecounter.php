@@ -29,9 +29,9 @@
 </nav>
 <div class="col-sm-6 customMargin">
 <h2 class= "signInH2">Calorie Counter</h2>
-	<form method="post">
+	<form method="post" class="form-horizontal">
 	<div class="form-group">
-  <label for="sel1">Select list:</label>
+  <label for="sel1">Gender:</label>
   <select class="form-control" name="gender">
     <option>Male</option>
     <option>Female</option>
@@ -76,8 +76,6 @@
 							$gender=66 + (13.7 *$weight) + (5 * $height) - (6.8 * $age);
 							echo "<p>Your estimated daily metabolic rate is $gender </p>";
 							echo "<p>This means that you need rouhgly $gender calories a day to maintain your current weight.</p>";
-							
-	// references of calorie calculator: http://www.bodybuildbid.com/articles/weightloss/calorie-calculator.html
 				}
 ?>
 
