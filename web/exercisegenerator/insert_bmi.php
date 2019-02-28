@@ -8,7 +8,7 @@ require_once("dbconnect.php");
 $db = get_db();
 
 // Get the Course from the DB
-$query = 'INSERT INTO calories(weight, height, bmical) VALUES(:weight, :height, :bmical)';
+$query = 'INSERT INTO bmi(weight, height, bmical) VALUES(:weight, :height, :bmical)';
 $statement = $db->prepare($query);
 $statement->bindValue(':weight', $weight, PDO::PARAM_STR);
 $statement->bindValue(':height', $height, PDO::PARAM_STR);
