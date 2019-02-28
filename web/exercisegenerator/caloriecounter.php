@@ -1,3 +1,17 @@
+<?php
+// Start the session
+session_start();
+echo $_SESSION['add'];
+if (isset($_SESSION['username']))
+{
+  $username = $_SESSION['username'];
+}
+else
+{
+  header("Location: signIn.php");
+  die(); // we always include a die after redirects.
+}
+?>
 <!DOCTYPE html>
 <html class="sinInHTML">
 <head>
@@ -68,14 +82,14 @@
 				switch ($gender){
 					case 'Female':
 						$gender= 655 + (9.6 * $weight ) + (1.8 * $height) - (4.7 * $age);
-						echo "<p>Your estimated daily metabolic rate is $gender </p>";
-						echo "<p>This means that you need rouhgly $gender calories a day to maintain your current weight.</p>";
+						echo "<h3><small>Your estimated daily metabolic rate is $gender</small></h3>";
+						echo "<h3><small>This means that you need rouhgly $gender calories a day to maintain your current weight.</small></h3>";
 
 						break;
 						case 'Male':
 							$gender=66 + (13.7 *$weight) + (5 * $height) - (6.8 * $age);
-							echo "<p>Your estimated daily metabolic rate is $gender </p>";
-							echo "<p>This means that you need rouhgly $gender calories a day to maintain your current weight.</p>";
+							echo "<h3><small>Your estimated daily metabolic rate is $gender </small></h3>";
+							echo "<h3><small>This means that you need rouhgly $gender calories a day to maintain your current weight.</small></h3>";
 				}
 ?>
 
