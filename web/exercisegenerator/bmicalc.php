@@ -92,9 +92,9 @@ function category($BMI)
       $BMI = bmicalc($height,$weight);
       $typecalc = category($BMI);
       echo "<div align='left' style='padding-left:25%; padding-bottom:30px;'>";
-      echo "<h3><small>Your BMI: ".$BMI</small></h3>;
+      echo "<h3><small>Your BMI: $BMI</small></h3>";
       echo "<br>";
-      echo "<h3><small>Condition Your Body: ".$typecalc</small></h3>;
+      echo "<h3><small>Condition Your Body: $typecalc</small></h3>";
       echo "</div>";
     }
   ?>
