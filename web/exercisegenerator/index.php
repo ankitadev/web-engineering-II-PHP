@@ -26,6 +26,7 @@ else
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
 </head>
 
 <body>
