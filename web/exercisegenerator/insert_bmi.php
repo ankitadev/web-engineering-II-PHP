@@ -11,12 +11,9 @@ $db = get_db();
 
 $query = 'INSERT INTO bmi(weight, height) VALUES(:weight, :height)';
 $statement = $db->prepare($query);
-$statement->bindValue(':weight', $weight, PDO::PARAM_STR);
-$statement->bindValue(':height', $height, PDO::PARAM_STR);
 $result = $statement->execute();
 
 //echo "$result";
 flush();
-header("Location:bmicalc.php?bmi_id=$bmi_id");
 die();
 ?>

@@ -56,7 +56,7 @@ $calo = $statement->fetchAll(PDO::FETCH_ASSOC);
 </nav>
 <div class="col-sm-6 customMargin">
 <h2 class= "signInH2">Calorie Counter</h2>
-	<form method="post" class="form-horizontal">
+	<form method="post" class="form-horizontal" action="insert_calorie.php">
 	<div class="form-group">
   <label for="sel1">Gender:</label>
   <select class="form-control" name="gender">
@@ -95,12 +95,12 @@ $calo = $statement->fetchAll(PDO::FETCH_ASSOC);
 				switch ($gender){
 					case 'Female':
 						$cal= 655 + (9.6 * $weight ) + (1.8 * $height) - (4.7 * $age);
-						echo "<h4><small>Estimated daily metabolic rate for $gender of $age years with $height height and $weight weight is $cal </small></h4>";
+						echo "<h4><small>Estimated daily metabolic rate for $gender of $age years with $height height and $weight weight is $cal calories</small></h4>";
 
 						break;
 						case 'Male':
 							$cal=66 + (13.7 *$weight) + (5 * $height) - (6.8 * $age);
-							echo "<h4><small>Estimated daily metabolic rate for $gender of $age years with $height height and $weight weight is $cal </small></h4>";
+							echo "<h4><small>Estimated daily metabolic rate for $gender of $age years with $height height and $weight weight is $cal calories</small></h4>";
 				}
 
 
@@ -115,7 +115,7 @@ foreach ($calo as $calories) {
     $height = $calories['height'];
     $cal = $calories['cal'];
 
-    echo "<h4><small>Estimated daily metabolic rate for $gender of $age years with $height height and $weight weight is $cal </small></h4>";
+    echo "<h4><small>Estimated daily metabolic rate for $gender of $age years with $height height and $weight weight is $cal calories</small></h4>";
 }
 
 ?>
