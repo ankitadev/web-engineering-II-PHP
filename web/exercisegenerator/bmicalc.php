@@ -59,9 +59,6 @@ function category($BMI)
   return $result;
 }
 ?>
-
-
-
 <div class="row">
   <div class="col-sm-4"><img style="width: 100%" src="gym.jpeg" alt="jpeg"></div>
   <div class="col-sm-8">
@@ -104,15 +101,16 @@ function category($BMI)
       $weight = $_POST['weight'];
       $bmical = bmicalc($height,$weight);
       $typecalc = category($bmical);
-      echo "<h4><small>BMI of $weight weight and $height height is $bmical. Falls under $typecalc</small></h4>";
-      
+      echo "<h4><small>BMI of $weight weight and $height height is $bmical which falls under $typecalc</small></h4>";
+
     foreach ($calculation as $bmi) {
     $id = $bmi['id'];
     $weight = $bmi['weight'];
     $height = $bmi['height'];
     $bmical = $bmi['bmical'];
+    $typecalc = category($bmical);
 
-    echo "<h4><small>BMI of $weight weight and $height height is $bmical. Falls under $typecalc</small></h4>";
+    echo "<h4><small>BMI of $weight weight and $height height is $bmical which falls under $typecalc</small></h4>";
 }
   ?>
 <table class="table table-striped">
