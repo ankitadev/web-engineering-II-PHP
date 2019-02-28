@@ -12,7 +12,7 @@ require_once("dbconnect.php");
 $db = get_db();
 
 // Get the Course from the DB
-$query = 'INSERT INTO calories(gender, age, weight, height, cal) VALUES(:gender, :age, :weight, :height, cal)';
+$query = 'INSERT INTO calories(gender, age, weight, height, cal) VALUES(:gender, :age, :weight, :height, :cal)';
 $statement = $db->prepare($query);
 $result = $statement->execute();
 
