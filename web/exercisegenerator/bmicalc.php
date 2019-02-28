@@ -27,6 +27,29 @@ else
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <?php
+function bmicalc($height,$weight)
+{
+  $height = $height/100;
+  $height = $height * $height;
+  $BMI = $weight / $height;
+  $BMI = round($BMI,2);
+  return $BMI;
+}
+function category($BMI)
+{
+  $result = '';
+  if($BMI < 15){$result = 'Very severely underweight';}
+  if(15 <= $BMI && $BMI < 16){$result = 'Severely underweight';}
+  if(16 <= $BMI && $BMI < 18.5){$result = 'Underweight';}
+  if(18.5 <= $BMI && $BMI < 25){$result = 'Normal (healthy weight)';}
+  if(25 <= $BMI && $BMI < 30 ){$result = 'Overweight';}
+  if(30 <= $BMI && $BMI < 35 ){$result = 'Obese Class I (Moderately obese)';}
+  if(35 <= $BMI && $BMI < 40 ){$result = 'Obese Class II (Severely obese)';}
+  if($BMI >= 40){$result = 'Obese Class III (Very severely obese)';}  
+  return $result;
+}
+?>
 <div class="row">
   <div class="col-sm-4"><img style="width: 100%" src="gym.jpeg" alt="jpeg"></div>
   <div class="col-sm-8">
@@ -41,7 +64,7 @@ else
     </ul>
   </div>
 </nav>
-<div class="col-sm-6">
+<div class="col-sm-6 customMargin">
 <h2 class= "signInH2">BMI Calculator</h2>
     <form class="form-horizontal" action="insert_bmi.php" method="post">
     <div class="form-group">
@@ -62,6 +85,19 @@ else
       </div>
     </div>
   </form>
+  <?php
+    if (isset($_POST['height'])){
+      $height = $_POST['height'];
+      $weight = $_POST['weight'];
+      $BMI = bmicalc($height,$weight);
+      $typecalc = category($BMI);
+      echo "<div align='left' style='padding-left:25%; padding-bottom:30px;'>";
+      echo "Your BMI: ".$BMI;
+      echo "<br>";
+      echo "Condition Your Body: ".$typecalc;
+      echo "</div>";
+    }
+  ?>
 <table class="table table-striped">
     <thead>
       <tr>

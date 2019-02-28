@@ -27,3 +27,6 @@ small.h3signin {
     width: 80%;
     margin: auto;
 }
+.col-sm-6.customMargin {
+    margin-left: 10%;
+}
