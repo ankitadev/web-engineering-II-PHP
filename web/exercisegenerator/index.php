@@ -49,6 +49,9 @@ else
     <div class="form-group">
 <a href="bmicalc.php"><button type="button" class="btn btn-default btn-block">BMI Calculator</button></a>
     </div>
+    <div class="form-group">
+<a href="caloriecounter.php"><button type="button" class="btn btn-default btn-block">Calorie Counter</button></a>
+    </div>
   </div>
 </div>
 </div>

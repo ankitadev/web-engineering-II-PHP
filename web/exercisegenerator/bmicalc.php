@@ -39,14 +39,12 @@ function bmicalc($height,$weight)
 function category($BMI)
 {
   $result = '';
-  if($BMI < 15){$result = 'Very severely underweight';}
-  if(15 <= $BMI && $BMI < 16){$result = 'Severely underweight';}
-  if(16 <= $BMI && $BMI < 18.5){$result = 'Underweight';}
-  if(18.5 <= $BMI && $BMI < 25){$result = 'Normal (healthy weight)';}
-  if(25 <= $BMI && $BMI < 30 ){$result = 'Overweight';}
-  if(30 <= $BMI && $BMI < 35 ){$result = 'Obese Class I (Moderately obese)';}
-  if(35 <= $BMI && $BMI < 40 ){$result = 'Obese Class II (Severely obese)';}
-  if($BMI >= 40){$result = 'Obese Class III (Very severely obese)';}  
+  if($BMI < 18.5){$result = 'Underweight';}
+  if(18.5 <= $BMI && $BMI < 24.9){$result = 'Normal weight';}
+  if(25.0 <= $BMI && $BMI < 29.9){$result = 'Overweight';}
+  if(30.0 <= $BMI && $BMI < 34.9 ){$result = 'Grade I Obesity';}
+  if(35.0 <= $BMI && $BMI < 39.9 ){$result = 'Grade II Obesity';}
+  if($BMI >= 40){$result = 'Grade III Obesity';}  
   return $result;
 }
 ?>
@@ -72,13 +70,13 @@ function category($BMI)
     <div class="form-group">
       <label class="control-label col-sm-2" for="weight">Weight: </label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="weight" placeholder="Weight (lb)" name="weight">
+        <input type="text" class="form-control" id="weight" placeholder="Weight (kg)" name="weight">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="height">Height: </label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="height" placeholder="Height (eg : 6.4)" name="height">
+        <input type="text" class="form-control" id="height" placeholder="Height (cm)" name="height">
       </div>
     </div>
     <div class="form-group">        
