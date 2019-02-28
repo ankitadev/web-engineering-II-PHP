@@ -85,6 +85,25 @@ function category($BMI)
       </div>
     </div>
   </form>
+  <p align="center"><span style="font-size:30px">CALCULATE YOUR BMI</span></p>
+  <div align="left" style="padding-left:25%;">
+  <form method="post" class="BMI">
+    <table border="0">
+      <tr>
+        <td><label for="height">Your Height (cm):</label></td>
+        <td><input type="text" name="height" id="height" value=""></td>
+      </tr>
+      <tr>
+        <td><label for="weight">Your Weight (kg):</label></td>
+        <td><input type="text" name="weight" id="weight" value=""></td>   
+      </tr>
+      <tr>
+        <td></td>
+        <td align="right"><input type="submit" value="COMPUTE BMI"></td>
+      </tr>
+    </table>
+  </form>
+  </div>
   <?php
     if (isset($_POST['height'])){
       $height = $_POST['height'];
