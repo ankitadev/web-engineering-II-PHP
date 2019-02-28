@@ -13,7 +13,7 @@ $db = get_db();
 // Get the Course from the DB
 $query = 'INSERT INTO calories(id, gender, age, weight, height, cal) VALUES(:id, :gender, :age, :weight, :height, :cal)';
 $statement = $db->prepare($query);
-$statement->bindValue(':id', $id, PDO::PARAM_STR);
+$statement->bindValue(':id', $id, PDO::PARAM_INT);
 $statement->bindValue(':gender', $gender, PDO::PARAM_STR);
 $statement->bindValue(':age', $age, PDO::PARAM_STR);
 $statement->bindValue(':weight', $weight, PDO::PARAM_STR);
