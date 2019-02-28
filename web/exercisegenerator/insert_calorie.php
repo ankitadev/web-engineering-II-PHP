@@ -23,5 +23,4 @@ $result = $statement->execute();
 flush();
 header("Location:caloriecounter.php?cal=$cal");
 die();
-
 ?>

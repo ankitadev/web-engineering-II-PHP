@@ -12,15 +12,15 @@ else
   die(); // we always include a die after redirects.
 }
 ?>
+
 <?php
 require_once("dbconnect.php");
 $db = get_db();
 
-$query = 'SELECT id, date, content FROM bmi WHERE course_id=:course_id';
+$query = 'SELECT id, weight, height, bmical FROM bmi;
 $statement = $db->prepare($query);
-$statement->bindValue(':course_id', $course_id, PDO::PARAM_INT);
 $statement->execute();
-$notes = $statement->fetchAll(PDO::FETCH_ASSOC);
+$calculation = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 <!DOCTYPE html>
@@ -77,7 +77,7 @@ function category($BMI)
 <h2 class= "signInH2">BMI Calculator</h2>
 
 
-    <form class="form-horizontal" method="post">
+    <form class="form-horizontal" method="post" action="insert_bmi.php">
     <div class="form-group">
       <label class="control-label col-sm-2" for="weight">Weight: </label>
       <div class="col-sm-10">
@@ -102,9 +102,17 @@ function category($BMI)
       $weight = $_POST['weight'];
       $BMI = bmicalc($height,$weight);
       $typecalc = category($BMI);
-      echo "<h3><small>Your BMI: $BMI</small></h3>";
-      echo "<h3><small>Weight Category: $typecalc</small></h3>";
+      echo "<h2><small>BMI of $weight weight and $height height is $BMI. Falls under $typecalc</small></h3>";
     }
+
+    foreach ($calculation as $bmi) {
+    $id = $bmi['id'];
+    $weight = $bmi['weight'];
+    $height = $bmi['height'];
+    $bmical = $bmi['cal'];
+
+    echo "<h2><small>BMI of $weight weight and $height height is $BMI. Falls under $typecalc</small></h3>;
+}
   ?>
 <table class="table table-striped">
     <thead>
