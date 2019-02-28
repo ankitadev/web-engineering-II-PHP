@@ -12,6 +12,18 @@ else
   die(); // we always include a die after redirects.
 }
 ?>
+
+<?php
+require_once("dbconnect.php");
+$db = get_db();
+
+$course_id = htmlspecialchars($_GET["course_id"]);
+
+$query = 'SELECT id, gender, age, weight, height FROM calories';
+$statement = $db->prepare($query);
+$notes = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 <!DOCTYPE html>
 <html class="sinInHTML">
 <head>
@@ -91,6 +103,15 @@ else
 							echo "<h3><small>Your estimated daily metabolic rate is $gender </small></h3>";
 							echo "<h3><small>This means that you need rouhgly $gender calories a day to maintain your current weight.</small></h3>";
 				}
+
+
+foreach ($notes as $note) {
+    $date = $note['date'];
+    $content = $note['content'];
+
+    echo "<p>Date: $gender</p>";
+}
+
 ?>
 
 	</form>

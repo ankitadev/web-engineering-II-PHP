@@ -12,6 +12,17 @@ else
   die(); // we always include a die after redirects.
 }
 ?>
+<?php
+require_once("dbconnect.php");
+$db = get_db();
+
+$query = 'SELECT id, date, content FROM bmi WHERE course_id=:course_id';
+$statement = $db->prepare($query);
+$statement->bindValue(':course_id', $course_id, PDO::PARAM_INT);
+$statement->execute();
+$notes = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 <!DOCTYPE html>
 <html class="sinInHTML">
 <head>
@@ -81,7 +92,7 @@ function category($BMI)
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <input type="submit" class="btn btn-success" value="COMPUTE BMI" />
+        <input type="submit" class="btn btn-success" value="Calculate" />
       </div>
     </div>
   </form>
