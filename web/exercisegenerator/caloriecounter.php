@@ -21,6 +21,7 @@ $course_id = htmlspecialchars($_GET["course_id"]);
 
 $query = 'SELECT id, gender, age, weight, height FROM calories';
 $statement = $db->prepare($query);
+$statement->execute();
 $notes = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
