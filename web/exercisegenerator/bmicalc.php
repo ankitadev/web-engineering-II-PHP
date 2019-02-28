@@ -13,6 +13,26 @@ else
 }
 
 ?>
+<?php
+require_once("dbconnect.php");
+$db = get_db();
+
+$bmi_id = htmlspecialchars($_GET["bmi_id"]);
+
+// Get the bmi from the DB
+$query = 'SELECT id, name FROM records WHERE id=:id';
+$statement = $db->prepare($query);
+$statement->bindValue(':id', $bmi_id, PDO::PARAM_INT);
+$statement->execute();
+$course = $statement->fetch(PDO::FETCH_ASSOC);
+
+$query = 'SELECT weight, height FROM bmi WHERE bmi_id=:bmi_id';
+$statement = $db->prepare($query);
+$statement->bindValue(':bmi_id', $bmi_id, PDO::PARAM_INT);
+$statement->execute();
+$notes = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 <!DOCTYPE html>
 <html class="sinInHTML">
 <head>
@@ -44,9 +64,14 @@ else
 </nav>
 <div class="col-sm-6">
 <h2 class= "signInH2">BMI Calculator</h2>
+<?php
+    $course_name = $course['name'];
+    $course_code = $course['course_code'];
+    echo "<h1>Notes for course:  $course_code - $course_name</h1>";
+?>
     <form action="insert_bmi.php" method="post">
         <input type="date" name="date" /><br />
-        <input type="hidden" name="course_id" value="<?php echo $course_id; ?>">
+        <input type="hidden" name="bmi_id" value="<?php echo $bmi_id; ?>">
         <textarea name="content"></textarea><br />
         <input type="submit" value="Insert Note">
     </form>
@@ -73,9 +98,17 @@ else
       </div>
     </div>
   </form>
+  <?php
 
+foreach ($notes as $note) {
+    $date = $note['date'];
+    $content = $note['content'];
 
+    echo "<p>Date: $date</p>";
+    echo "<p>$content</p>";
+}
 
+?>
 
 <?php
 
@@ -86,7 +119,7 @@ foreach ($bmi as $bmi) {
     $bmicalc = ($height / ($weightin * $weightin)) * 703;
 
 
-echo "Today is " . date("Y/m/d") . "<br>";
+    echo "Today is " . date("Y/m/d") . "<br>";
     echo "<p>Your BMI is: $bmicalc</p>";
 }
 

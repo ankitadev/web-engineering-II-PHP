@@ -1,4 +1,6 @@
 <?php
+
+$bmi_id = htmlspecialchars($_POST['bmi_id']);
 $weight = htmlspecialchars($_POST['weight']);
 $height = htmlspecialchars($_POST['height']);
 
@@ -15,6 +17,6 @@ $result = $statement->execute();
 
 //echo "$result";
 flush();
-header("Location:bmicalc.php");
+header("Location:bmicalc.php?bmi_id=$bmi_id");
 die();
 ?>
