@@ -101,7 +101,6 @@ function category($BMI)
       $weight = $_POST['weight'];
       $bmical = bmicalc($height,$weight);
       $typecalc = category($bmical);
-      echo "<h4><small>BMI of $weight weight and $height height is $bmical which falls under $typecalc</small></h4>";
 
     foreach ($calculation as $bmi) {
     $id = $bmi['id'];
