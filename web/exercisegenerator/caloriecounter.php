@@ -94,15 +94,13 @@ $calo = $statement->fetchAll(PDO::FETCH_ASSOC);
 		
 				switch ($gender){
 					case 'Female':
-						$gender= 655 + (9.6 * $weight ) + (1.8 * $height) - (4.7 * $age);
-						echo "<h3><small>Your estimated daily metabolic rate is $gender</small></h3>";
-						echo "<h3><small>This means that you need rouhgly $gender calories a day to maintain your current weight.</small></h3>";
+						$cal= 655 + (9.6 * $weight ) + (1.8 * $height) - (4.7 * $age);
+						echo "<h4><small>Estimated daily metabolic rate for $gender of $age years with $height height and $weight weight is $cal </small></h4>";
 
 						break;
 						case 'Male':
-							$gender=66 + (13.7 *$weight) + (5 * $height) - (6.8 * $age);
-							echo "<h3><small>Your estimated daily metabolic rate is $gender </small></h3>";
-							echo "<h3><small>This means that you need rouhgly $gender calories a day to maintain your current weight.</small></h3>";
+							$cal=66 + (13.7 *$weight) + (5 * $height) - (6.8 * $age);
+							echo "<h4><small>Estimated daily metabolic rate for $gender of $age years with $height height and $weight weight is $cal </small></h4>";
 				}
 
 
@@ -117,7 +115,7 @@ foreach ($calo as $calories) {
     $height = $calories['height'];
     $cal = $calories['cal'];
 
-    echo "<p>Date: $cal</p>";
+    echo "<h4><small>Estimated daily metabolic rate for $gender of $age years with $height height and $weight weight is $cal </small></h4>";
 }
 
 ?>
