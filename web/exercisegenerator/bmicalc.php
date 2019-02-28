@@ -12,17 +12,17 @@ else
   die(); // we always include a die after redirects.
 }
 ?>
-
 <?php
 require_once("dbconnect.php");
 $db = get_db();
 
-$query = 'SELECT id, weight, height, bmical FROM bmi;
+$query = 'SELECT id, weight, height bmical FROM bmi';
 $statement = $db->prepare($query);
 $statement->execute();
 $calculation = $statement->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
+
 <!DOCTYPE html>
 <html class="sinInHTML">
 <head>
@@ -59,6 +59,9 @@ function category($BMI)
   return $result;
 }
 ?>
+
+
+
 <div class="row">
   <div class="col-sm-4"><img style="width: 100%" src="gym.jpeg" alt="jpeg"></div>
   <div class="col-sm-8">
@@ -111,7 +114,7 @@ function category($BMI)
     $height = $bmi['height'];
     $bmical = $bmi['cal'];
 
-    echo "<h2><small>BMI of $weight weight and $height height is $BMI. Falls under $typecalc</small></h3>;
+    echo "<h2><small>BMI of $weight weight and $height height is $BMI. Falls under $typecalc</small></h3>";
 }
   ?>
 <table class="table table-striped">
