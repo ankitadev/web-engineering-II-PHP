@@ -66,7 +66,9 @@ function category($BMI)
 </nav>
 <div class="col-sm-6 customMargin">
 <h2 class= "signInH2">BMI Calculator</h2>
-    <form class="form-horizontal" action="insert_bmi.php" method="post">
+
+
+    <form class="form-horizontal" method="post">
     <div class="form-group">
       <label class="control-label col-sm-2" for="weight">Weight: </label>
       <div class="col-sm-10">
@@ -81,29 +83,10 @@ function category($BMI)
     </div>
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
-        <input type="submit" class="btn btn-success" value="Insert Note" />
+        <input type="submit" class="btn btn-success" value="COMPUTE BMI" />
       </div>
     </div>
   </form>
-  <p align="center"><span style="font-size:30px">CALCULATE YOUR BMI</span></p>
-  <div align="left" style="padding-left:25%;">
-  <form method="post" class="BMI">
-    <table border="0">
-      <tr>
-        <td><label for="height">Your Height (cm):</label></td>
-        <td><input type="text" name="height" id="height" value=""></td>
-      </tr>
-      <tr>
-        <td><label for="weight">Your Weight (kg):</label></td>
-        <td><input type="text" name="weight" id="weight" value=""></td>   
-      </tr>
-      <tr>
-        <td></td>
-        <td align="right"><input type="submit" value="COMPUTE BMI"></td>
-      </tr>
-    </table>
-  </form>
-  </div>
   <?php
     if (isset($_POST['height'])){
       $height = $_POST['height'];
