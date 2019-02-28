@@ -16,7 +16,7 @@ else
 require_once("dbconnect.php");
 $db = get_db();
 
-$query = 'SELECT id, weight, height bmical FROM bmi';
+$query = 'SELECT id, weight, height, bmical FROM bmi';
 $statement = $db->prepare($query);
 $statement->execute();
 $calculation = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -103,18 +103,18 @@ function category($BMI)
     if (isset($_POST['height'])){
       $height = $_POST['height'];
       $weight = $_POST['weight'];
-      $BMI = bmicalc($height,$weight);
-      $typecalc = category($BMI);
-      echo "<h2><small>BMI of $weight weight and $height height is $BMI. Falls under $typecalc</small></h3>";
+      $bmical = bmicalc($height,$weight);
+      $typecalc = category($bmical);
+      echo "<h4><small>BMI of $weight weight and $height height is $bmical. Falls under $typecalc</small></h4>";
     }
 
     foreach ($calculation as $bmi) {
     $id = $bmi['id'];
     $weight = $bmi['weight'];
     $height = $bmi['height'];
-    $bmical = $bmi['cal'];
+    $bmical = $bmi['bmical'];
 
-    echo "<h2><small>BMI of $weight weight and $height height is $BMI. Falls under $typecalc</small></h3>";
+    echo "<h4><small>BMI of $weight weight and $height height is $bmical. Falls under $typecalc</small></h4>";
 }
   ?>
 <table class="table table-striped">
