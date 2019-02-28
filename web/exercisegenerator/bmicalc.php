@@ -11,28 +11,6 @@ else
   header("Location: signIn.php");
   die(); // we always include a die after redirects.
 }
-
-?>
-<?php
-require_once("dbconnect.php");
-$db = get_db();
-
-$bmi_id = htmlspecialchars($_GET["bmi_id"]);
-
-// Get the bmi from the DB
-$query = 'SELECT id, name FROM records WHERE id=:id';
-$statement = $db->prepare($query);
-$statement->bindValue(':id', $bmi_id, PDO::PARAM_INT);
-$statement->execute();
-$course = $statement->fetch(PDO::FETCH_ASSOC);
-
-$query = 'SELECT weight, height FROM bmi WHERE bmi_id=:bmi_id';
-$statement = $db->prepare($query);
-$statement->bindValue(':bmi_id', $bmi_id, PDO::PARAM_INT);
-$statement->execute();
-$notes = $statement->fetchAll(PDO::FETCH_ASSOC);
-
-?>
 <!DOCTYPE html>
 <html class="sinInHTML">
 <head>
@@ -64,21 +42,6 @@ $notes = $statement->fetchAll(PDO::FETCH_ASSOC);
 </nav>
 <div class="col-sm-6">
 <h2 class= "signInH2">BMI Calculator</h2>
-<?php
-    $course_name = $course['name'];
-    $course_code = $course['course_code'];
-    echo "<h1>Notes for course:  $course_code - $course_name</h1>";
-?>
-    <form action="insert_bmi.php" method="post">
-        <input type="date" name="date" /><br />
-        <input type="hidden" name="bmi_id" value="<?php echo $bmi_id; ?>">
-        <textarea name="content"></textarea><br />
-        <input type="submit" value="Insert Note">
-    </form>
-
-
-
-
     <form class="form-horizontal" action="insert_bmi.php" method="post">
     <div class="form-group">
       <label class="control-label col-sm-2" for="weight">Weight: </label>
@@ -98,32 +61,6 @@ $notes = $statement->fetchAll(PDO::FETCH_ASSOC);
       </div>
     </div>
   </form>
-  <?php
-
-foreach ($notes as $note) {
-    $date = $note['date'];
-    $content = $note['content'];
-
-    echo "<p>Date: $date</p>";
-    echo "<p>$content</p>";
-}
-
-?>
-
-<?php
-
-foreach ($bmi as $bmi) {
-    $weight = $bmi['weight'];
-    $height = $bmi['height'];
-    $weightin = $weight * 12;
-    $bmicalc = ($height / ($weightin * $weightin)) * 703;
-
-
-    echo "Today is " . date("Y/m/d") . "<br>";
-    echo "<p>Your BMI is: $bmicalc</p>";
-}
-
-?>
 <table class="table table-striped">
     <thead>
       <tr>
