@@ -17,6 +17,6 @@ $result = $statement->execute();
 
 //echo "$result";
 flush();
-header("Location:caloriecounter.php?bmical=$bmical");
+header("Location:caloriecounter.php?weight=$weight");
 die();
 ?>
